@@ -29,7 +29,7 @@ body {
     justify-content: space-between;
     width: 1200px;
 
-    margin-top: 20px;
+    margin-top: 16px;
     padding: 24px;
     padding-top: 0;
 }
@@ -69,15 +69,43 @@ body {
     font-weight: 600;
     padding: 8px 12px;
     border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.header .header-container .navbar-container-2 nav ul li {
+    padding: 12px 8px;
+}
+
+.header .header-container .navbar-container-1 nav ul li.active {
+    border-bottom-color: white;
 }
 
 .header .header-container .navbar-container-1 nav ul li:hover,
 .header .header-container .navbar-container-2 nav ul li:hover {
-    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
-.header .header-container .navbar-container-1 nav ul li a,
-.header .header-container .navbar-container-2 nav ul li a {
+.header .header-container .navbar-container-1 nav ul li:not(.active):hover,
+.header .header-container .navbar-container-2 nav ul li:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.header .header-container .navbar-container-1 nav ul li button,
+.header .header-container .navbar-container-2 nav ul li button {
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+    gap: 11px;
 }
