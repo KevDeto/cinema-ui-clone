@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Cinemark</title>
@@ -42,28 +43,28 @@
                 </svg>
                 <nav>
                     <ul>
-                        <li><button type="button">PELÍCULAS</button></li>
-                        <li><button type="button">CANDY</button></li>
-                        <li><button type="button">CINE FAN</button></li>
-                        <li><button type="button">REGALÁ CINE</button></li>
-                        <li><button type="button">STORE</button></li>
+                        <li class="item"><button type="button">PELÍCULAS</button></li>
+                        <li class="item"><button type="button">CANDY</button></li>
+                        <li class="item"><button type="button">CINE FAN</button></li>
+                        <li class="item"><button type="button">REGALÁ CINE</button></li>
+                        <li class="item"><button type="button">STORE</button></li>
                     </ul>
                 </nav>
             </div>
             <div class="navbar-container-2">
                 <nav>
                     <ul>
-                        <li><button type="button">
+                        <li class="item"><button type="button">
                                 <i class="fa-solid fa-location-dot fa-sm"></i>
                                 ELEGÍ CINE
                                 <i class="fa-solid fa-caret-down fa-sm"></i>
                             </button>
                         </li>
-                        <li><button type="button">ELEGÍ PELICULA
+                        <li class="item"><button type="button">ELEGÍ PELICULA
                                 <i class="fa-solid fa-caret-down"></i>
                             </button>
                         </li>
-                        <li class="icon-user"><button type="button">
+                        <li><button type="button">
                                 <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-b933ss" focusable="false"
                                     aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -81,10 +82,42 @@
         </div>
     </header>
     <main>
+        <section class="section-home">
+            <!-- Slider main container -->
+            <div class="swiper swiper-home">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-container">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide-home"><img src="image/banner-home/Extendimos.jpg" alt=""></div>
+                    <div class="swiper-slide slide-home"><img src="image/banner-home/LiloYStitch.jpg" alt=""></div>
+                    <div class="swiper-slide slide-home"><img src="image/banner-home/Thunderbolts.jpg" alt=""></div>
+                    <div class="swiper-slide slide-home"><img src="image/banner-home/KarateKid.jpg" alt=""></div>
+                    <div class="swiper-slide slide-home"><img src="image/banner-home/Minecraft.jpg" alt=""></div>
+                    <div class="swiper-slide slide-home"><img src="image/banner-home/RoboDelSiglo.jpg" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="section-cartelera">
+            <div class="titulo-container">
+                <h2>PELÍCULAS EN CARTELERA</h2>
+                <div class="etiqueta">
+                    <i class="fa-regular fa-face-smile"></i> 
+                </div>
+            </div>
+            <div class="cards-container">
+
+            </div>
+        </section>
     </main>
     <footer>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
