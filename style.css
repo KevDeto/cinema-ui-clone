@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --background-fondo: #12100d;
@@ -16,6 +17,12 @@ body {
     background-color: var(--background-fondo);
     font-family: "Oswald", sans-serif;
     color: white;
+}
+
+main {
+    padding: 0px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header {
@@ -117,7 +124,7 @@ body {
 }
 
 /*========Section Home========*/
-.section-home{
+.section-home {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -177,11 +184,11 @@ body {
 }
 
 .swiper-home .swiper-button-next {
-    right: 40px;
+    right: 17px;
 }
 
 .swiper-home .swiper-button-prev {
-    left: 1068px;
+    left: 1042px;
 }
 
 .swiper-home .swiper-button-prev::after,
@@ -195,3 +202,82 @@ body {
 
 
 /*========Section Cartelera========*/
+.section-cartelera {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.section-cartelera .titulo-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-cartelera .titulo-container h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.section-cartelera .etiqueta-container {
+    background-color: rgb(221, 0, 0);
+    width: 119px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.section-cartelera .etiqueta-container .etiqueta {
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-cartelera .etiqueta-container .etiqueta span {
+    font-size: 14px;
+}
+
+/*========Filtros========*/
+.section-cartelera .filtro-container {
+    width: 100%;
+    padding: 12px 0 36px;
+    display: inline-flex;
+    gap: 2px;
+}
+
+.section-cartelera .filtro-container button {
+    color: white;
+    background-color: rgb(35, 33, 30);
+    border: 1px solid rgb(35, 33, 30);
+    height: 58px;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.section-cartelera .filtro-container .button-1 {
+    width: 140px;
+    border-radius: 12px 0 0 12px;
+}
+
+.section-cartelera .filtro-container .button-2 {
+    width: 122px;
+}
+
+.section-cartelera .filtro-container .button-3 {
+    width: 179px;
+    border-radius: 0 12px 12px 0;
+}
+
+.section-cartelera .filtro-container button .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 100%;
+}
