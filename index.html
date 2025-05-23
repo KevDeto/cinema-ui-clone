@@ -133,15 +133,37 @@
                     </div>
                 </button>
             </div>
-            <div class="cards-container">
+            <div class="peliculas-container" id="peliculas-container">
+                <!--aca se generan las cards-->
+            </div>
+        </section>
+        <section class="section-preventa">
+                        <!-- Slider main container -->
+            <div class="swiper swiper-preventa">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-container">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/j-hop.jpg" alt=""></div>
+                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/ado.jpg" alt=""></div>
+                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/stitch.jpg" alt=""></div>
+                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/mision-imposible.jpg" alt=""></div>
+                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/bailarina.jpg" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
     </main>
     <footer>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts/swiper.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/cartelera.js"></script>
 </body>
 
 </html>

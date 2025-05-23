@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+ */
 :root {
     --background-fondo: #12100d;
     --color-lines: rgba(255, 255, 255, 0.12);
@@ -280,4 +281,184 @@ main {
     align-items: center;
     padding: 0 24px;
     height: 100%;
+}
+
+
+/*================================================*/
+.peliculas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.swiper-container,
+.pelicula-wrapper {
+    width: 270px;
+}
+
+.slide-preventa,
+.pelicula-card {
+    background-color: rgb(35, 33, 30);
+    border-radius: 12px;
+    width: 270px;
+    height: 533px;
+    cursor: pointer;
+}
+
+.slide-preventa img,
+.pelicula-imagen {
+    position: relative;
+    width: 270px;
+    height: 405px;
+}
+
+
+.pelicula-imagen img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+.destacado-icon {
+    background-color: red;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 48px;
+    height: 38px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 12px;
+}
+
+
+.pelicula-duracion {
+    background-color: rgba(18, 16, 13, 0.2);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+
+    width: 63px;
+    height: 38px;
+
+    border-radius: 10px;
+}
+
+.pelicula-duracion span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    font-size: 14px;
+    height: 38px;
+}
+
+.pelicula-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 128px;
+    padding: 24px 16px;
+    font-size: 14px;
+}
+
+.pelicula-titulo {
+    display: flex;
+    justify-content: space-between;
+    /*     align-items: start;
+ */
+    font-size: 15.4px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.pelicula-detalles {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400px;
+    height: 36px;
+    display: block;
+    align-content: flex-end;
+    overflow: hidden;
+}
+
+.pelicula-detalles p {
+    font-weight: 400;
+    line-height: 18px;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+
+.clasificacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+}
+
+.pelicula-clasificacion-atp {
+    background-color: rgb(41, 204, 106);
+}
+
+.pelicula-clasificacion-13 {
+    background-color: rgb(0, 153, 255);
+}
+
+.pelicula-clasificacion-16 {
+    background-color: rgb(242, 195, 70);
+}
+
+.pelicula-clasificacion-r {
+    background-color: rgb(255, 98, 98);
+}
+
+.pelicula-solapa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 2px;
+}
+
+.pelicula-solapa .estreno {
+    background-color: rgb(250, 244, 242);
+    color: #8b8986;
+}
+
+.pelicula-solapa .reestreno {
+    background-color: rgb(107, 13, 13);
+
+}
+
+.pelicula-solapa .estreno,
+.pelicula-solapa .reestreno {
+    padding: 0px 12px;
+    height: 32px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 6px;
+}
+
+/*SECCION PREVENTA*/
+.section-preventa{
+    margin-top: 35px;
+    padding-top: 36px;
+    border-top: 2px solid var(--color-lines);
 }
