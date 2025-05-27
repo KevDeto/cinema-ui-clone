@@ -138,32 +138,89 @@
             </div>
         </section>
         <section class="section-preventa">
-                        <!-- Slider main container -->
+            <!-- Slider main container -->
             <div class="swiper swiper-preventa">
+                <div class="titulo-container">
+                    <h2>PELÍCULAS EN PREVENTA</h2>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper swiper-container">
-                    <!-- Slides -->
-                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/j-hop.jpg" alt=""></div>
-                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/ado.jpg" alt=""></div>
-                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/stitch.jpg" alt=""></div>
-                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/mision-imposible.jpg" alt=""></div>
-                    <div class="swiper-slide slide-preventa"><img src="image/peliculas-preventa/bailarina.jpg" alt=""></div>
+                <div class=" swiper-wrapper swiper-container" id="preventa-container">
+
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="section-disfruta">
+            <!-- Slider main container -->
+            <div class="swiper swiper-disfruta">
+                <div class="titulo-container">
+                    <h2>DISFRUTÁ EN CINEMARK</h2>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- Additional required wrapper -->
+                <div class=" swiper-wrapper swiper-container">
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-6.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-7.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide-disfruta">
+                        <img src="image/disfruta/disfruta-8.jpg" alt="">
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+            </div>
+        </section>
+        <section class="section-proximos">
+            <div class="swiper swiper-proximos">
+                <div class="titulo-container">
+                    <h2>PRÓXIMOS ESTRENOS</h2>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- Additional required wrapper -->
+                <div class=" swiper-wrapper swiper-container" id="proximos-container">
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
             </div>
         </section>
     </main>
     <footer>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="scripts/swiper.js"></script>
     <script src="scripts/header.js"></script>
-    <script src="scripts/cartelera.js"></script>
+    <script src="scripts/peliculas.js" type="module"></script>
+    <script src="scripts/cartelera.js" type="module"></script>
+    <script src="scripts/preventa.js" type="module"></script>
+    <script src="scripts/proximos.js" type="module"></script>
+    <script src="scripts/swiper.js"></script>
+
 </body>
 
 </html>

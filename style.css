@@ -135,6 +135,9 @@ main {
     padding-top: 36px;
 }
 
+.swiper-proximos .swiper-container,
+.swiper-disfruta .swiper-container,
+.swiper-preventa .swiper-container,
 .swiper-home .swiper-container {
     padding-bottom: 36px;
 }
@@ -151,13 +154,21 @@ main {
     cursor: pointer;
 }
 
+.swiper-proximos .swiper-pagination,
+.swiper-disfruta .swiper-pagination,
+.swiper-preventa .swiper-pagination,
 .swiper-home .swiper-pagination {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 13px;
 }
 
+.swiper-proximos .swiper-pagination .swiper-pagination-bullet,
+.swiper-disfruta .swiper-pagination .swiper-pagination-bullet,
+.swiper-preventa .swiper-pagination .swiper-pagination-bullet,
 .swiper-home .swiper-pagination .swiper-pagination-bullet {
     width: 45px;
     height: 4px;
@@ -167,10 +178,19 @@ main {
     margin: 0px 2px;
 }
 
+.swiper-proximos .swiper-pagination .swiper-pagination-bullet-active,
+.swiper-disfruta .swiper-pagination .swiper-pagination-bullet-active,
+.swiper-preventa .swiper-pagination .swiper-pagination-bullet-active,
 .swiper-home .swiper-pagination .swiper-pagination-bullet-active {
     background-color: white;
 }
 
+.swiper-proximos .titulo-container .swiper-button-prev,
+.swiper-proximos .titulo-container .swiper-button-next,
+.swiper-disfruta .titulo-container .swiper-button-prev,
+.swiper-disfruta .titulo-container .swiper-button-next,
+.swiper-preventa .titulo-container .swiper-button-next,
+.swiper-preventa .titulo-container .swiper-button-prev,
 .swiper-home .swiper-button-next,
 .swiper-home .swiper-button-prev {
     position: absolute;
@@ -184,14 +204,41 @@ main {
     backdrop-filter: blur(5px);
 }
 
+.swiper-proximos .titulo-container .swiper-button-next,
+.swiper-disfruta .titulo-container .swiper-button-next,
+.swiper-preventa .titulo-container .swiper-button-next,
 .swiper-home .swiper-button-next {
     right: 17px;
 }
 
+.swiper-proximos .titulo-container .swiper-button-next,
+.swiper-proximos .titulo-container .swiper-button-prev,
+.swiper-disfruta .titulo-container .swiper-button-prev,
+.swiper-disfruta .titulo-container .swiper-button-next,
+.swiper-preventa .titulo-container .swiper-button-prev,
+.swiper-preventa .titulo-container .swiper-button-next {
+    top: 30px;
+}
+
+.swiper-proximos .titulo-container .swiper-button-prev,
+.swiper-disfruta .titulo-container .swiper-button-prev,
+.swiper-preventa .titulo-container .swiper-button-prev,
 .swiper-home .swiper-button-prev {
     left: 1042px;
 }
 
+.swiper-proximos .titulo-container .swiper-button-disabled,
+.swiper-disfruta .titulo-container .swiper-button-disabled,
+.swiper-preventa .titulo-container .swiper-button-disabled {
+    background: rgba(255, 255, 255, 0);
+}
+
+.swiper-proximos .swiper-button-next::after,
+.swiper-proximos .swiper-button-prev::after,
+.swiper-disfruta .swiper-button-next::after,
+.swiper-disfruta .swiper-button-prev::after,
+.swiper-preventa .swiper-button-next::after,
+.swiper-preventa .swiper-button-prev::after,
 .swiper-home .swiper-button-prev::after,
 .swiper-home .swiper-button-next::after {
     color: white;
@@ -209,14 +256,20 @@ main {
     padding-top: 20px;
 }
 
+.section-proximos .titulo-container,
+.section-disfruta .titulo-container,
+.section-preventa .titulo-container,
 .section-cartelera .titulo-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
+.section-proximos .titulo-container h2,
+.section-disfruta .titulo-container h2,
+.section-preventa .titulo-container h2,
 .section-cartelera .titulo-container h2 {
     font-size: 32px;
     font-weight: 600;
@@ -291,12 +344,15 @@ main {
     gap: 24px;
 }
 
-.swiper-container,
+/* .swiper-container,
+ */
+.swiper-slide,
 .pelicula-wrapper {
     width: 270px;
 }
 
-.slide-preventa,
+/* .slide-preventa,
+ */
 .pelicula-card {
     background-color: rgb(35, 33, 30);
     border-radius: 12px;
@@ -305,7 +361,8 @@ main {
     cursor: pointer;
 }
 
-.slide-preventa img,
+/* .slide-preventa img,
+ */
 .pelicula-imagen {
     position: relative;
     width: 270px;
@@ -441,11 +498,12 @@ main {
     color: #8b8986;
 }
 
+.pelicula-solapa .alternativo,
 .pelicula-solapa .reestreno {
     background-color: rgb(107, 13, 13);
-
 }
 
+.pelicula-solapa .alternativo,
 .pelicula-solapa .estreno,
 .pelicula-solapa .reestreno {
     padding: 0px 12px;
@@ -457,8 +515,21 @@ main {
 }
 
 /*SECCION PREVENTA*/
-.section-preventa{
+.section-preventa {
     margin-top: 35px;
-    padding-top: 36px;
+    padding-top: 30px;
     border-top: 2px solid var(--color-lines);
+}
+
+.section-proximos,
+.section-disfruta {
+    margin-top: 28px;
+    padding-top: 30px;
+    border-top: 2px solid var(--color-lines);
+}
+
+.section-disfruta .slide-disfruta img {
+    width: 366px;
+    height: 355px;
+    border-radius: 12px;
 }
