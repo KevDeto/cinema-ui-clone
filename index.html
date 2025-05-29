@@ -1,217 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Cinemark</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-
-        <div class="header-container">
-            <div class="navbar-container-1">
-                <svg width="148" height="18" viewBox="0 0 148 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.38412 13.8599C10.2866 13.4191 11.0698 12.7754 11.6695 11.9815L11.9206 11.6732L10.1339 10.3859L9.89533 10.6818C9.45997 11.249 8.8838 11.6978 8.22149 11.9857C7.55918 12.2736 6.83271 12.391 6.11104 12.3268C5.38936 12.2626 4.69642 12.0188 4.09799 11.6187C3.49956 11.2186 3.01549 10.6754 2.69172 10.0406C2.36796 9.40588 2.21525 8.70065 2.24808 7.99187C2.2809 7.2831 2.49819 6.59429 2.8793 5.99084C3.26042 5.38738 3.79272 4.8893 4.42568 4.54387C5.05865 4.19843 5.77127 4.0171 6.49592 4.01709C7.15757 4.01153 7.81112 4.1598 8.40285 4.44969C8.99458 4.73959 9.5076 5.16285 9.89972 5.68467L10.1346 5.99132L11.9384 4.68693L11.6856 4.37762C11.0826 3.5863 10.2997 2.94325 9.39895 2.49937C8.49821 2.05549 7.50431 1.82296 6.49591 1.82019C4.77608 1.81979 3.1263 2.48733 1.90852 3.67638C0.690743 4.86544 0.0044076 6.47888 8.75743e-05 8.16277C-0.00453062 9.01409 0.173553 9.85687 0.522803 10.6365C0.835292 11.3998 1.30879 12.09 1.91235 12.6619L1.91556 12.6651C2.51413 13.2579 3.22765 13.7276 4.01421 14.0467C4.80077 14.3659 5.64452 14.5279 6.49591 14.5233C7.4985 14.5273 8.48796 14.3 9.38412 13.8599ZM16.2198 14.3347V2.19748H13.9582V14.3347L16.2198 14.3347ZM29.0239 14.3347V2.19743H26.7626V10.2958L21.172 2.19743H18.9599V14.3347H21.221V6.21972L26.8297 14.3347L29.0239 14.3347ZM39.7195 14.3347V12.1549H34.0031V8.42873H39.1234V6.23188H34.0031V4.34345H39.8772V2.19743H31.7418V14.3347L39.7195 14.3347ZM53.3066 14.3347V2.19743H51.1638L47.7572 6.77731L44.351 2.19743H42.2253V14.3347H44.4692V6.07319L47.7573 10.4933L51.0627 6.07381V14.3347L53.3066 14.3347ZM63.8554 14.3347L62.5752 11.0384H58.3765L57.0789 14.3347H54.6662L59.4367 2.19752H61.4974L66.2853 14.3347H63.8554ZM61.6973 8.85861L60.4758 5.72423L59.2547 8.85861H61.6973ZM75.2929 14.3348L70.8565 8.36012H69.7905V14.3347H67.5991V7.07677L67.5995 2.19764H73.44C73.8528 2.197 74.2614 2.27765 74.6417 2.43479C75.022 2.59193 75.3661 2.82234 75.6536 3.11232C75.949 3.39416 76.1838 3.73105 76.3441 4.10313C76.5044 4.47522 76.587 4.87496 76.587 5.27879C76.587 5.68262 76.5044 6.08236 76.3441 6.45445C76.1838 6.82653 75.949 7.16342 75.6536 7.44526C75.0922 8.01134 74.3266 8.33939 73.521 8.35902L77.9546 14.3348L75.2929 14.3348ZM73.44 6.21412C73.6907 6.21342 73.931 6.11661 74.1096 5.94445C74.2882 5.77229 74.3908 5.53847 74.3954 5.29313V5.26445C74.3908 5.0191 74.2882 4.78528 74.1096 4.61311C73.931 4.44094 73.6907 4.34413 73.44 4.34343H69.7904V6.21412H73.44ZM91.1642 14.3347L85.388 6.38969L89.9117 2.19745H86.6736L81.6323 6.83809V2.19743H79.3881V14.3347H81.6323V9.82694L83.6816 7.92576L88.3444 14.3347L91.1642 14.3347Z"
-                        fill="white" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"></path>
-                    <path
-                        d="M105.771 0.828857V5.82008H102.455V0.828857H99.1641V14.4377H102.455V9.10649H105.771V14.4377H109.058V0.828857H105.771Z"
-                        fill="white" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-ffffff, #e8e6e3);"></path>
-                    <path
-                        d="M114.986 4.06128C111.961 4.06128 109.512 6.51008 109.512 9.53043C109.512 12.5508 111.961 15.0045 114.986 15.0045C118.011 15.0045 120.455 12.5557 120.455 9.53043C120.455 6.50515 118.006 4.06128 114.986 4.06128ZM114.966 11.4372C113.838 11.4372 112.926 10.5208 112.926 9.39247C112.926 8.26415 113.843 7.35263 114.966 7.35263C116.089 7.35263 117.006 8.26415 117.006 9.39247C117.006 10.5208 116.089 11.4372 114.966 11.4372Z"
-                        fill="white" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-ffffff, #e8e6e3);"></path>
-                    <path
-                        d="M130.805 1.19897V9.33372C130.805 9.33372 130.436 14.7487 136.56 14.5812L137.723 11.4623C137.723 11.4623 135.033 11.9993 134.407 10.4423C134.407 10.4423 134.067 9.87571 134.234 7.57473H136.59V4.74161H134.18V1.19897H130.805Z"
-                        fill="white" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-ffffff, #e8e6e3);"></path>
-                    <path
-                        d="M140.803 11.2201C140.941 12.3582 141.429 12.8362 142.424 12.9396C143.212 13.0234 144.016 12.8362 144.016 11.8359C144.016 10.9688 143.222 10.752 141.247 10.3135C139.655 9.94884 138.064 9.36744 138.064 7.54439C138.064 4.89357 140.276 4.21362 142.424 4.21362C144.572 4.21362 146.632 4.97733 146.844 7.52468H143.759C143.538 6.44563 142.892 6.17956 142.247 6.17956C141.601 6.17956 141.01 6.39143 141.074 7.08616C141.143 7.78582 142.365 7.88929 143.937 8.27361C145.548 8.653 147.115 9.6138 147.115 11.5452C147.115 14.2749 144.829 15.1569 142.542 15.1569C140.256 15.1569 137.95 14.1862 137.832 11.4368L140.798 11.2299L140.803 11.2201Z"
-                        fill="white" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-ffffff, #e8e6e3);"></path>
-                    <path
-                        d="M120.828 4.53394H124.312V10.5943C124.312 10.5943 124.4 11.156 125.563 11.156C126.726 11.156 126.874 10.5943 126.874 10.5943V4.53394H130.2V13.9842C130.2 13.9842 130.229 14.5213 130.042 15.2554C129.623 16.8765 128.13 19.276 122.863 19.1676C122.247 19.1676 120.853 19.1578 120.853 19.1578V15.9699C120.853 15.9699 121.74 15.965 122.833 15.9551C125.036 15.9551 126.509 15.7827 126.81 13.9793C126.81 13.9793 122.114 15.8073 121.05 12.1907C121.05 12.1907 120.838 11.5108 120.838 9.43154V4.53394H120.828Z"
-                        fill="white" data-darkreader-inline-fill=""
-                        style="--darkreader-inline-fill: var(--darkreader-text-ffffff, #e8e6e3);"></path>
-                </svg>
-                <nav>
-                    <ul>
-                        <li class="item"><button type="button">PELÍCULAS</button></li>
-                        <li class="item"><button type="button">CANDY</button></li>
-                        <li class="item"><button type="button">CINE FAN</button></li>
-                        <li class="item"><button type="button">REGALÁ CINE</button></li>
-                        <li class="item"><button type="button">STORE</button></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="navbar-container-2">
-                <nav>
-                    <ul>
-                        <li class="item"><button type="button">
-                                <i class="fa-solid fa-location-dot fa-sm"></i>
-                                ELEGÍ CINE
-                                <i class="fa-solid fa-caret-down fa-sm"></i>
-                            </button>
-                        </li>
-                        <li class="item"><button type="button">ELEGÍ PELICULA
-                                <i class="fa-solid fa-caret-down"></i>
-                            </button>
-                        </li>
-                        <li><button type="button">
-                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-b933ss" focusable="false"
-                                    aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12 11.3847C11.175 11.3847 10.4688 11.0909 9.88125 10.5034C9.29375 9.91592 9 9.20967 9 8.38467C9 7.55965 9.29375 6.85339 9.88125 6.26589C10.4688 5.67839 11.175 5.38464 12 5.38464C12.825 5.38464 13.5313 5.67839 14.1188 6.26589C14.7063 6.85339 15 7.55965 15 8.38467C15 9.20967 14.7063 9.91592 14.1188 10.5034C13.5313 11.0909 12.825 11.3847 12 11.3847ZM5 17.577V16.9693C5 16.5565 5.12019 16.1702 5.36058 15.8106C5.60096 15.451 5.92436 15.1718 6.33078 14.9731C7.27436 14.5206 8.21858 14.1811 9.16345 13.9548C10.1083 13.7286 11.0539 13.6154 12 13.6154C12.9461 13.6154 13.8917 13.7286 14.8365 13.9548C15.7814 14.1811 16.7256 14.5206 17.6692 14.9731C18.0756 15.1718 18.399 15.451 18.6394 15.8106C18.8798 16.1702 19 16.5565 19 16.9693V17.577C19 17.8706 18.9003 18.117 18.701 18.3164C18.5016 18.5158 18.2551 18.6154 17.9615 18.6154H6.03845C5.74487 18.6154 5.49839 18.5158 5.29902 18.3164C5.09967 18.117 5 17.8706 5 17.577ZM6 17.6154H18V16.9693C18 16.7475 17.9285 16.5392 17.7856 16.3443C17.6426 16.1494 17.4449 15.9847 17.1923 15.85C16.3692 15.4513 15.5206 15.1459 14.6464 14.9337C13.7722 14.7215 12.8901 14.6154 12 14.6154C11.1099 14.6154 10.2278 14.7215 9.3536 14.9337C8.4794 15.1459 7.63077 15.4513 6.8077 15.85C6.55513 15.9847 6.35737 16.1494 6.21442 16.3443C6.07148 16.5392 6 16.7475 6 16.9693V17.6154ZM12 10.3847C12.55 10.3847 13.0208 10.1888 13.4125 9.79717C13.8042 9.4055 14 8.93467 14 8.38467C14 7.83467 13.8042 7.36384 13.4125 6.97217C13.0208 6.5805 12.55 6.38467 12 6.38467C11.45 6.38467 10.9792 6.5805 10.5875 6.97217C10.1958 7.36384 10 7.83467 10 8.38467C10 8.93467 10.1958 9.4055 10.5875 9.79717C10.9792 10.1888 11.45 10.3847 12 10.3847Z"
-                                        fill="currentColor" data-darkreader-inline-fill=""
-                                        style="--darkreader-inline-fill: currentColor;">
-                                    </path>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="header-container">
+        <div class="navbar-container-1">
+          <svg
+            width="148"
+            height="18"
+            viewBox="0 0 148 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.38412 13.8599C10.2866 13.4191 11.0698 12.7754 11.6695 11.9815L11.9206 11.6732L10.1339 10.3859L9.89533 10.6818C9.45997 11.249 8.8838 11.6978 8.22149 11.9857C7.55918 12.2736 6.83271 12.391 6.11104 12.3268C5.38936 12.2626 4.69642 12.0188 4.09799 11.6187C3.49956 11.2186 3.01549 10.6754 2.69172 10.0406C2.36796 9.40588 2.21525 8.70065 2.24808 7.99187C2.2809 7.2831 2.49819 6.59429 2.8793 5.99084C3.26042 5.38738 3.79272 4.8893 4.42568 4.54387C5.05865 4.19843 5.77127 4.0171 6.49592 4.01709C7.15757 4.01153 7.81112 4.1598 8.40285 4.44969C8.99458 4.73959 9.5076 5.16285 9.89972 5.68467L10.1346 5.99132L11.9384 4.68693L11.6856 4.37762C11.0826 3.5863 10.2997 2.94325 9.39895 2.49937C8.49821 2.05549 7.50431 1.82296 6.49591 1.82019C4.77608 1.81979 3.1263 2.48733 1.90852 3.67638C0.690743 4.86544 0.0044076 6.47888 8.75743e-05 8.16277C-0.00453062 9.01409 0.173553 9.85687 0.522803 10.6365C0.835292 11.3998 1.30879 12.09 1.91235 12.6619L1.91556 12.6651C2.51413 13.2579 3.22765 13.7276 4.01421 14.0467C4.80077 14.3659 5.64452 14.5279 6.49591 14.5233C7.4985 14.5273 8.48796 14.3 9.38412 13.8599ZM16.2198 14.3347V2.19748H13.9582V14.3347L16.2198 14.3347ZM29.0239 14.3347V2.19743H26.7626V10.2958L21.172 2.19743H18.9599V14.3347H21.221V6.21972L26.8297 14.3347L29.0239 14.3347ZM39.7195 14.3347V12.1549H34.0031V8.42873H39.1234V6.23188H34.0031V4.34345H39.8772V2.19743H31.7418V14.3347L39.7195 14.3347ZM53.3066 14.3347V2.19743H51.1638L47.7572 6.77731L44.351 2.19743H42.2253V14.3347H44.4692V6.07319L47.7573 10.4933L51.0627 6.07381V14.3347L53.3066 14.3347ZM63.8554 14.3347L62.5752 11.0384H58.3765L57.0789 14.3347H54.6662L59.4367 2.19752H61.4974L66.2853 14.3347H63.8554ZM61.6973 8.85861L60.4758 5.72423L59.2547 8.85861H61.6973ZM75.2929 14.3348L70.8565 8.36012H69.7905V14.3347H67.5991V7.07677L67.5995 2.19764H73.44C73.8528 2.197 74.2614 2.27765 74.6417 2.43479C75.022 2.59193 75.3661 2.82234 75.6536 3.11232C75.949 3.39416 76.1838 3.73105 76.3441 4.10313C76.5044 4.47522 76.587 4.87496 76.587 5.27879C76.587 5.68262 76.5044 6.08236 76.3441 6.45445C76.1838 6.82653 75.949 7.16342 75.6536 7.44526C75.0922 8.01134 74.3266 8.33939 73.521 8.35902L77.9546 14.3348L75.2929 14.3348ZM73.44 6.21412C73.6907 6.21342 73.931 6.11661 74.1096 5.94445C74.2882 5.77229 74.3908 5.53847 74.3954 5.29313V5.26445C74.3908 5.0191 74.2882 4.78528 74.1096 4.61311C73.931 4.44094 73.6907 4.34413 73.44 4.34343H69.7904V6.21412H73.44ZM91.1642 14.3347L85.388 6.38969L89.9117 2.19745H86.6736L81.6323 6.83809V2.19743H79.3881V14.3347H81.6323V9.82694L83.6816 7.92576L88.3444 14.3347L91.1642 14.3347Z"
+              fill="white"
+              data-darkreader-inline-fill=""
+              style="
+                --darkreader-inline-fill: var(
+                  --darkreader-background-ffffff,
+                  #181a1b
+                );
+              "
+            ></path>
+            <path
+              d="M105.771 0.828857V5.82008H102.455V0.828857H99.1641V14.4377H102.455V9.10649H105.771V14.4377H109.058V0.828857H105.771Z"
+              fill="white"
+              data-darkreader-inline-fill=""
+              style="
+                --darkreader-inline-fill: var(
+                  --darkreader-text-ffffff,
+                  #e8e6e3
+                );
+              "
+            ></path>
+            <path
+              d="M114.986 4.06128C111.961 4.06128 109.512 6.51008 109.512 9.53043C109.512 12.5508 111.961 15.0045 114.986 15.0045C118.011 15.0045 120.455 12.5557 120.455 9.53043C120.455 6.50515 118.006 4.06128 114.986 4.06128ZM114.966 11.4372C113.838 11.4372 112.926 10.5208 112.926 9.39247C112.926 8.26415 113.843 7.35263 114.966 7.35263C116.089 7.35263 117.006 8.26415 117.006 9.39247C117.006 10.5208 116.089 11.4372 114.966 11.4372Z"
+              fill="white"
+              data-darkreader-inline-fill=""
+              style="
+                --darkreader-inline-fill: var(
+                  --darkreader-text-ffffff,
+                  #e8e6e3
+                );
+              "
+            ></path>
+            <path
+              d="M130.805 1.19897V9.33372C130.805 9.33372 130.436 14.7487 136.56 14.5812L137.723 11.4623C137.723 11.4623 135.033 11.9993 134.407 10.4423C134.407 10.4423 134.067 9.87571 134.234 7.57473H136.59V4.74161H134.18V1.19897H130.805Z"
+              fill="white"
+              data-darkreader-inline-fill=""
+              style="
+                --darkreader-inline-fill: var(
+                  --darkreader-text-ffffff,
+                  #e8e6e3
+                );
+              "
+            ></path>
+            <path
+              d="M140.803 11.2201C140.941 12.3582 141.429 12.8362 142.424 12.9396C143.212 13.0234 144.016 12.8362 144.016 11.8359C144.016 10.9688 143.222 10.752 141.247 10.3135C139.655 9.94884 138.064 9.36744 138.064 7.54439C138.064 4.89357 140.276 4.21362 142.424 4.21362C144.572 4.21362 146.632 4.97733 146.844 7.52468H143.759C143.538 6.44563 142.892 6.17956 142.247 6.17956C141.601 6.17956 141.01 6.39143 141.074 7.08616C141.143 7.78582 142.365 7.88929 143.937 8.27361C145.548 8.653 147.115 9.6138 147.115 11.5452C147.115 14.2749 144.829 15.1569 142.542 15.1569C140.256 15.1569 137.95 14.1862 137.832 11.4368L140.798 11.2299L140.803 11.2201Z"
+              fill="white"
+              data-darkreader-inline-fill=""
+              style="
+                --darkreader-inline-fill: var(
+                  --darkreader-text-ffffff,
+                  #e8e6e3
+                );
+              "
+            ></path>
+            <path
+              d="M120.828 4.53394H124.312V10.5943C124.312 10.5943 124.4 11.156 125.563 11.156C126.726 11.156 126.874 10.5943 126.874 10.5943V4.53394H130.2V13.9842C130.2 13.9842 130.229 14.5213 130.042 15.2554C129.623 16.8765 128.13 19.276 122.863 19.1676C122.247 19.1676 120.853 19.1578 120.853 19.1578V15.9699C120.853 15.9699 121.74 15.965 122.833 15.9551C125.036 15.9551 126.509 15.7827 126.81 13.9793C126.81 13.9793 122.114 15.8073 121.05 12.1907C121.05 12.1907 120.838 11.5108 120.838 9.43154V4.53394H120.828Z"
+              fill="white"
+              data-darkreader-inline-fill=""
+              style="
+                --darkreader-inline-fill: var(
+                  --darkreader-text-ffffff,
+                  #e8e6e3
+                );
+              "
+            ></path>
+          </svg>
+          <nav>
+            <ul>
+              <li class="item"><button type="button">PELÍCULAS</button></li>
+              <li class="item"><button type="button">CANDY</button></li>
+              <li class="item"><button type="button">CINE FAN</button></li>
+              <li class="item"><button type="button">REGALÁ CINE</button></li>
+              <li class="item"><button type="button">STORE</button></li>
+            </ul>
+          </nav>
         </div>
+        <div class="navbar-container-2">
+          <nav>
+            <ul>
+              <li class="item">
+                <button type="button">
+                  <i class="fa-solid fa-location-dot fa-sm"></i>
+                  ELEGÍ CINE
+                  <i class="fa-solid fa-caret-down fa-sm"></i>
+                </button>
+              </li>
+              <li class="item">
+                <button type="button">
+                  ELEGÍ PELICULA
+                  <i class="fa-solid fa-caret-down"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-b933ss"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 11.3847C11.175 11.3847 10.4688 11.0909 9.88125 10.5034C9.29375 9.91592 9 9.20967 9 8.38467C9 7.55965 9.29375 6.85339 9.88125 6.26589C10.4688 5.67839 11.175 5.38464 12 5.38464C12.825 5.38464 13.5313 5.67839 14.1188 6.26589C14.7063 6.85339 15 7.55965 15 8.38467C15 9.20967 14.7063 9.91592 14.1188 10.5034C13.5313 11.0909 12.825 11.3847 12 11.3847ZM5 17.577V16.9693C5 16.5565 5.12019 16.1702 5.36058 15.8106C5.60096 15.451 5.92436 15.1718 6.33078 14.9731C7.27436 14.5206 8.21858 14.1811 9.16345 13.9548C10.1083 13.7286 11.0539 13.6154 12 13.6154C12.9461 13.6154 13.8917 13.7286 14.8365 13.9548C15.7814 14.1811 16.7256 14.5206 17.6692 14.9731C18.0756 15.1718 18.399 15.451 18.6394 15.8106C18.8798 16.1702 19 16.5565 19 16.9693V17.577C19 17.8706 18.9003 18.117 18.701 18.3164C18.5016 18.5158 18.2551 18.6154 17.9615 18.6154H6.03845C5.74487 18.6154 5.49839 18.5158 5.29902 18.3164C5.09967 18.117 5 17.8706 5 17.577ZM6 17.6154H18V16.9693C18 16.7475 17.9285 16.5392 17.7856 16.3443C17.6426 16.1494 17.4449 15.9847 17.1923 15.85C16.3692 15.4513 15.5206 15.1459 14.6464 14.9337C13.7722 14.7215 12.8901 14.6154 12 14.6154C11.1099 14.6154 10.2278 14.7215 9.3536 14.9337C8.4794 15.1459 7.63077 15.4513 6.8077 15.85C6.55513 15.9847 6.35737 16.1494 6.21442 16.3443C6.07148 16.5392 6 16.7475 6 16.9693V17.6154ZM12 10.3847C12.55 10.3847 13.0208 10.1888 13.4125 9.79717C13.8042 9.4055 14 8.93467 14 8.38467C14 7.83467 13.8042 7.36384 13.4125 6.97217C13.0208 6.5805 12.55 6.38467 12 6.38467C11.45 6.38467 10.9792 6.5805 10.5875 6.97217C10.1958 7.36384 10 7.83467 10 8.38467C10 8.93467 10.1958 9.4055 10.5875 9.79717C10.9792 10.1888 11.45 10.3847 12 10.3847Z"
+                      fill="currentColor"
+                      data-darkreader-inline-fill=""
+                      style="--darkreader-inline-fill: currentColor"
+                    ></path>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
     <main>
-        <section class="section-home">
-            <!-- Slider main container -->
-            <div class="swiper swiper-home">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper swiper-container">
-                    <!-- Slides -->
-                    <div class="swiper-slide slide-home"><img src="image/banner-home/Extendimos.jpg" alt=""></div>
-                    <div class="swiper-slide slide-home"><img src="image/banner-home/LiloYStitch.jpg" alt=""></div>
-                    <div class="swiper-slide slide-home"><img src="image/banner-home/Thunderbolts.jpg" alt=""></div>
-                    <div class="swiper-slide slide-home"><img src="image/banner-home/KarateKid.jpg" alt=""></div>
-                    <div class="swiper-slide slide-home"><img src="image/banner-home/Minecraft.jpg" alt=""></div>
-                    <div class="swiper-slide slide-home"><img src="image/banner-home/RoboDelSiglo.jpg" alt=""></div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+      <section class="section-home">
+        <!-- Slider main container -->
+        <div class="swiper swiper-home">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper swiper-container">
+            <!-- Slides -->
+            <div class="swiper-slide slide-home">
+              <img src="image/banner-home/Extendimos.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-home">
+              <img src="image/banner-home/LiloYStitch.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-home">
+              <img src="image/banner-home/Thunderbolts.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-home">
+              <img src="image/banner-home/KarateKid.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-home">
+              <img src="image/banner-home/Minecraft.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-home">
+              <img src="image/banner-home/RoboDelSiglo.jpg" alt="" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="section-cartelera">
+        <div class="titulo-container">
+          <h2>PELÍCULAS EN CARTELERA</h2>
+          <div class="etiqueta-container">
+            <div class="etiqueta">
+              <i class="fa-regular fa-face-smile fa-lg"></i>
+              <span>DESTACADO</span>
             </div>
-        </section>
-        <section class="section-cartelera">
-            <div class="titulo-container">
-                <h2>PELÍCULAS EN CARTELERA</h2>
-                <div class="etiqueta-container">
-                    <div class="etiqueta">
-                        <i class="fa-regular fa-face-smile fa-lg"></i>
-                        <span>DESTACADO</span>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="filtro-container">
+          <button class="button-1">
+            <div class="button-container">
+              <span>Formatos</span>
+              <i class="fa-solid fa-caret-down"></i>
             </div>
-            <div class="filtro-container">
-                <button class="button-1">
-                    <div class="button-container">
-                        <span>Formatos</span>
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                </button>
-                <button class="button-2">
-                    <div class="button-container">
-                        <span>Idioma</span>
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                </button>
-                <button class="button-3">
-                    <div class="button-container">
-                        <span>Otras opciones</span>
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                </button>
+          </button>
+          <button class="button-2">
+            <div class="button-container">
+              <span>Idioma</span>
+              <i class="fa-solid fa-caret-down"></i>
             </div>
-            <div class="peliculas-container" id="peliculas-container">
-                <!--aca se generan las cards-->
+          </button>
+          <button class="button-3">
+            <div class="button-container">
+              <span>Otras opciones</span>
+              <i class="fa-solid fa-caret-down"></i>
             </div>
-        </section>
-        <section class="section-preventa">
-            <!-- Slider main container -->
-            <div class="swiper swiper-preventa">
-                <div class="titulo-container">
-                    <h2>PELÍCULAS EN PREVENTA</h2>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                <!-- Additional required wrapper -->
-                <div class=" swiper-wrapper swiper-container" id="preventa-container">
-
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
+          </button>
+        </div>
+        <div class="peliculas-container" id="peliculas-container">
+          <!--aca se generan las cards-->
+        </div>
+      </section>
+      <section class="section-preventa">
+        <!-- Slider main container -->
+        <div class="swiper swiper-preventa">
+          <div class="titulo-container">
+            <h2>PELÍCULAS EN PREVENTA</h2>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div
+            class="swiper-wrapper swiper-container"
+            id="preventa-container"
+          ></div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+        </div>
+      </section>
+      <section class="section-disfruta">
+        <!-- Slider main container -->
+        <div class="swiper swiper-disfruta">
+          <div class="titulo-container">
+            <h2>DISFRUTÁ EN CINEMARK</h2>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper swiper-container">
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-1.jpg" alt="" />
             </div>
-        </section>
-        <section class="section-disfruta">
-            <!-- Slider main container -->
-            <div class="swiper swiper-disfruta">
-                <div class="titulo-container">
-                    <h2>DISFRUTÁ EN CINEMARK</h2>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                <!-- Additional required wrapper -->
-                <div class=" swiper-wrapper swiper-container">
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-2.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-3.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-4.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-5.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-6.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-7.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide slide-disfruta">
-                        <img src="image/disfruta/disfruta-8.jpg" alt="">
-                    </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-2.jpg" alt="" />
             </div>
-        </section>
-        <section class="section-proximos">
-            <div class="swiper swiper-proximos">
-                <div class="titulo-container">
-                    <h2>PRÓXIMOS ESTRENOS</h2>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                <!-- Additional required wrapper -->
-                <div class=" swiper-wrapper swiper-container" id="proximos-container">
-
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-3.jpg" alt="" />
             </div>
-        </section>
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-5.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-6.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-7.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-disfruta">
+              <img src="image/disfruta/disfruta-8.jpg" alt="" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+        </div>
+      </section>
+      <section class="section-proximos">
+        <div class="swiper swiper-proximos">
+          <div class="titulo-container">
+            <h2>PRÓXIMOS ESTRENOS</h2>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div
+            class="swiper-wrapper swiper-container"
+            id="proximos-container"
+          ></div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+        </div>
+      </section>
+      <section class="section-formatos">
+        <!-- Slider main container -->
+        <div class="swiper swiper-formatos">
+          <div class="titulo-container">
+            <h2>DESCUBRÍ NUESTROS FORMATOS Y VIVÍ UNA EXPERIENCIA ÚNICA.</h2>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper swiper-container">
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-5.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-6.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-7.jpg" alt="" />
+            </div>
+            <div class="swiper-slide slide-formatos">
+              <img src="image/disfruta/disfruta-8.jpg" alt="" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+        </div>
+      </section>
     </main>
     <footer>
+      <section class="section-redes">
+        <span>SEGUÍNOS</span>
+        <nav class="redes">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="section-opciones">
+        <div class="opcion-1">
+          <div class="titulo">
+            <span>CINES</span>
+          </div>
+          <ul>
+            <li><a href="#">Precios Vigentes</a></li>
+            <li><a href="#">Formatos</a></li>
+          </ul>
+        </div>
+        <div class="opcion-2">
+          <div class="titulo">
+            <span>PROMOCIONES</span>
+          </div>
+          <ul>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Asocia tu cuenta YPF</a></li>
+          </ul>
+        </div>
+        <div class="opcion-3">
+          <div class="titulo">
+            <span><a href="#">VENTAS CORPORATIVAS</a></span>
+          </div>
+        </div>
+        <div class="opcion-4">
+          <div class="titulo">
+            <span><a href="#">CUMPLEAÑOS</a></span>
+          </div>
+        </div>
+        <div class="opcion-5">
+          <div class="titulo">
+            <span>AYUDA</span>
+          </div>
+          <ul>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/header.js"></script>
@@ -220,7 +399,5 @@
     <script src="scripts/preventa.js" type="module"></script>
     <script src="scripts/proximos.js" type="module"></script>
     <script src="scripts/swiper.js"></script>
-
-</body>
-
+  </body>
 </html>

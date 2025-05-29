@@ -20,6 +20,7 @@ body {
     color: white;
 }
 
+footer,
 main {
     padding: 0px 24px;
     max-width: 1200px;
@@ -135,6 +136,7 @@ main {
     padding-top: 36px;
 }
 
+.swiper-formatos .swiper-container,
 .swiper-proximos .swiper-container,
 .swiper-disfruta .swiper-container,
 .swiper-preventa .swiper-container,
@@ -154,6 +156,7 @@ main {
     cursor: pointer;
 }
 
+.swiper-formatos .swiper-pagination,
 .swiper-proximos .swiper-pagination,
 .swiper-disfruta .swiper-pagination,
 .swiper-preventa .swiper-pagination,
@@ -166,6 +169,7 @@ main {
     height: 13px;
 }
 
+.swiper-formatos .swiper-pagination .swiper-pagination-bullet,
 .swiper-proximos .swiper-pagination .swiper-pagination-bullet,
 .swiper-disfruta .swiper-pagination .swiper-pagination-bullet,
 .swiper-preventa .swiper-pagination .swiper-pagination-bullet,
@@ -178,32 +182,36 @@ main {
     margin: 0px 2px;
 }
 
+.swiper-formatos .swiper-pagination .swiper-pagination-bullet-active,
 .swiper-proximos .swiper-pagination .swiper-pagination-bullet-active,
 .swiper-disfruta .swiper-pagination .swiper-pagination-bullet-active,
 .swiper-preventa .swiper-pagination .swiper-pagination-bullet-active,
 .swiper-home .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
+.swiper-formatos .titulo-container .swiper-button-prev,
+.swiper-formatos .titulo-container .swiper-button-next,
 .swiper-proximos .titulo-container .swiper-button-prev,
 .swiper-proximos .titulo-container .swiper-button-next,
 .swiper-disfruta .titulo-container .swiper-button-prev,
 .swiper-disfruta .titulo-container .swiper-button-next,
-.swiper-preventa .titulo-container .swiper-button-next,
 .swiper-preventa .titulo-container .swiper-button-prev,
+.swiper-preventa .titulo-container .swiper-button-next,
 .swiper-home .swiper-button-next,
 .swiper-home .swiper-button-prev {
     position: absolute;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.15);
     width: 44px;
     height: 32px;
     transition: all 0.3s;
     border-radius: 8px;
     top: 403px;
-    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
 }
 
+.swiper-formatos .titulo-container .swiper-button-next,
 .swiper-proximos .titulo-container .swiper-button-next,
 .swiper-disfruta .titulo-container .swiper-button-next,
 .swiper-preventa .titulo-container .swiper-button-next,
@@ -211,6 +219,8 @@ main {
     right: 17px;
 }
 
+.swiper-formatos .titulo-container .swiper-button-next,
+.swiper-formatos .titulo-container .swiper-button-prev,
 .swiper-proximos .titulo-container .swiper-button-next,
 .swiper-proximos .titulo-container .swiper-button-prev,
 .swiper-disfruta .titulo-container .swiper-button-prev,
@@ -220,6 +230,7 @@ main {
     top: 30px;
 }
 
+.swiper-formatos .titulo-container .swiper-button-prev,
 .swiper-proximos .titulo-container .swiper-button-prev,
 .swiper-disfruta .titulo-container .swiper-button-prev,
 .swiper-preventa .titulo-container .swiper-button-prev,
@@ -227,12 +238,15 @@ main {
     left: 1042px;
 }
 
+.swiper-formatos .titulo-container .swiper-button-disabled,
 .swiper-proximos .titulo-container .swiper-button-disabled,
 .swiper-disfruta .titulo-container .swiper-button-disabled,
 .swiper-preventa .titulo-container .swiper-button-disabled {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.1);
 }
 
+.swiper-formatos .swiper-button-next::after,
+.swiper-formatos .swiper-button-prev::after,
 .swiper-proximos .swiper-button-next::after,
 .swiper-proximos .swiper-button-prev::after,
 .swiper-disfruta .swiper-button-next::after,
@@ -241,7 +255,7 @@ main {
 .swiper-preventa .swiper-button-prev::after,
 .swiper-home .swiper-button-prev::after,
 .swiper-home .swiper-button-next::after {
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     width: 5px;
     height: 10px;
     font-size: 10px;
@@ -256,6 +270,7 @@ main {
     padding-top: 20px;
 }
 
+.section-formatos .titulo-container,
 .section-proximos .titulo-container,
 .section-disfruta .titulo-container,
 .section-preventa .titulo-container,
@@ -267,6 +282,7 @@ main {
     margin-bottom: 28px;
 }
 
+.section-formatos .titulo-container h2,
 .section-proximos .titulo-container h2,
 .section-disfruta .titulo-container h2,
 .section-preventa .titulo-container h2,
@@ -521,15 +537,99 @@ main {
     border-top: 2px solid var(--color-lines);
 }
 
+.section-formatos,
 .section-proximos,
 .section-disfruta {
     margin-top: 28px;
+
+}
+
+.section-opciones {
+    padding-bottom: 30px;
     padding-top: 30px;
     border-top: 2px solid var(--color-lines);
 }
 
+.section-formatos .slide-formatos img,
 .section-disfruta .slide-disfruta img {
     width: 366px;
     height: 355px;
     border-radius: 12px;
+}
+
+.section-redes {
+
+    padding: 36px 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.section-redes .redes {
+    align-content: center;
+    width: 252px;
+    height: 33px;
+}
+
+.section-redes span {
+    font-weight: 600;
+    padding-right: 16px;
+}
+
+.section-redes .redes ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.section-redes .redes ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 32px;
+    border: 12px;
+}
+
+.section-redes .redes ul li,
+.section-redes .redes ul li a {
+    color: white;
+    background-color: rgb(35, 33, 30);
+    border-radius: 8px;
+}
+
+.section-opciones {
+    display: flex;
+}
+
+.section-opciones ul {
+    list-style: none;
+}
+
+.section-opciones .opcion-1,
+.section-opciones .opcion-2,
+.section-opciones .opcion-3,
+.section-opciones .opcion-4 {
+    margin-right: 40px;
+}
+
+.section-opciones .titulo {
+    font-weight: 600;
+}
+
+.section-opciones a {
+    color: white;
+    text-decoration: none;
+}
+
+.section-opciones ul li a {
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    color: rgb(170, 169, 168);
+}
+
+.section-opciones ul li {
+    padding: 8px 0px;
+
 }
