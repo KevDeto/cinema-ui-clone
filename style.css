@@ -541,7 +541,12 @@ main {
 .section-proximos,
 .section-disfruta {
     margin-top: 28px;
+}
 
+.section-nosotros {
+    padding-bottom: 30px;
+    padding-top: 36px;
+    border-top: 2px solid var(--color-lines);
 }
 
 .section-opciones {
@@ -558,7 +563,6 @@ main {
 }
 
 .section-redes {
-
     padding: 36px 0px;
     display: flex;
     justify-content: right;
@@ -603,6 +607,7 @@ main {
     display: flex;
 }
 
+.opcion-contacto ul,
 .section-opciones ul {
     list-style: none;
 }
@@ -618,11 +623,13 @@ main {
     font-weight: 600;
 }
 
+.opcion-contacto a,
 .section-opciones a {
     color: white;
     text-decoration: none;
 }
 
+.opcion-contacto ul li a,
 .section-opciones ul li a {
     font-family: "Work Sans", sans-serif;
     font-size: 12px;
@@ -631,5 +638,63 @@ main {
 
 .section-opciones ul li {
     padding: 8px 0px;
+}
 
+/*parte final*/
+.section-nosotros {
+    display: flex;
+
+}
+
+.opcion-contacto ul li {
+    padding: 12px 0px;
+}
+
+.opcion-copy .copy,
+.opcion-copy .copy a {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.opcion-contacto,
+.opcion-copy {
+    flex: 1;
+    line-height: 16.8px;
+}
+
+.opcion-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.opcion-copy .copy{
+    font-weight: 400;
+    padding-right: 32px;
+}
+
+.opcion-copy .arrepentimiento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcion-copy .arrepentimiento .imagenes-qr img {
+    padding: 4px;
+}
+
+.opcion-copy .arrepentimiento .boton-arrepentimiento {
+    width: 368px;
+    height: 96px;
+    padding: 6px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.opcion-copy .arrepentimiento .boton-arrepentimiento h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
 }
