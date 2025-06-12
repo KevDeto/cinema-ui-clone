@@ -32,6 +32,10 @@ main {
     justify-content: center;
     border-bottom: 2px solid var(--color-lines);
     padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: var(--background-fondo);
 }
 
 .header .header-container {
@@ -418,7 +422,7 @@ main {
     top: 2px;
     right: 2px;
 
-    width: 63px;
+    width: 65px;
     height: 38px;
 
     border-radius: 10px;
@@ -531,10 +535,18 @@ main {
 }
 
 /*SECCION PREVENTA*/
-.section-preventa {
+.section-preventa.con-boton {
     margin-top: 35px;
-    padding-top: 30px;
     border-top: 2px solid var(--color-lines);
+}
+
+.section-preventa.sin-boton {
+    margin-top: 35px;
+    border-top: 2px solid var(--color-lines);
+}
+
+.section-preventa {
+    padding-top: 36px;
 }
 
 .section-formatos,
@@ -669,7 +681,7 @@ main {
     justify-content: space-between;
 }
 
-.opcion-copy .copy{
+.opcion-copy .copy {
     font-weight: 400;
     padding-right: 32px;
 }
@@ -697,4 +709,44 @@ main {
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
     font-weight: 600;
+}
+
+.section-cartelera .ver-mas-btn {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(221, 0, 0);
+    width: 360px;
+    height: 80px;
+    padding: 6px 16px;
+    border-radius: 12px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.section-cartelera .ver-mas-btn .ver-mas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-cartelera .ver-mas-btn .ver-mas i {
+    padding-left: 10px;
+}
+
+.section-cartelera .btn-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.section-cartelera .btn-container .linea {
+    position: absolute;
+    top: 50%;
+    border: 1px solid var(--color-lines);
+    width: 100%;
+    z-index: 1;
 }

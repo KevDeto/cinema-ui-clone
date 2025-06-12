@@ -1,6 +1,6 @@
 import { peliculas } from './peliculas.js';
 
-const peliculasPreventa = peliculas.filter(p => p.preventa);
+const peliculasPreventa = peliculas.filter(p => p.proximoEstreno);
 
 const preventaContainer = document.getElementById('proximos-container');
 
@@ -44,12 +44,9 @@ function crearSlidePelicula(pelicula) {
     return slide;
 }
 
-// Función para inicializar el slider
 function inicializarPreventa() {
-    // Limpiar contenedor primero
     preventaContainer.innerHTML = '';
 
-    // Agregar todas las películas de preventa
     peliculasPreventa.forEach(pelicula => {
         const slide = crearSlidePelicula(pelicula);
         preventaContainer.appendChild(slide);
@@ -58,5 +55,4 @@ function inicializarPreventa() {
 
 }
 
-// Inicializar al cargar la página
 document.addEventListener('DOMContentLoaded', inicializarPreventa);
