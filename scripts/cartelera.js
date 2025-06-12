@@ -1,20 +1,40 @@
 import { peliculas } from "./peliculas.js";
 
-const peliculasCartelera = peliculas.filter((p) => p.cartelera);
+const CONFIG = {
+  PELICULAS_INICIALES: 8,
+  PELICULAS_POR_CARGA: 8,
+  CLASIFICACIONES: {
+    ATP: "clasificacion-atp",
+    "+13": "clasificacion-13",
+    "+16": "clasificacion-16",
+    R: "clasificacion-r",
+  },
+};
 
-const peliculasContainer = document.getElementById("peliculas-container");
-let verMasBtn = document.getElementById("ver-mas-btn");
-const sectionPreventa = document.getElementById("section-preventa");
+let estado = {
+  peliculasMostradas: 0,
+  peliculasCartelera: [],
+  verMasBtn: null,
+};
 
-const PELICULAS_INICIALES = 8;
-const PELICULAS_POR_CARGA = 8;
-let peliculasMostradas = 0;
+const elementosDOM = {
+  peliculasContainer: document.getElementById("peliculas-container"),
+  sectionPreventa: document.getElementById("section-preventa"),
+};
 
-if (!verMasBtn) {
-  verMasBtn = document.createElement("div");
-  verMasBtn.id = "btn-container";
-  verMasBtn.className = "btn-container";
-  verMasBtn.innerHTML = `
+function inicializarAplicacion() {
+  estado.peliculasCartelera = peliculas.filter((p) => p.cartelera);
+  crearBotonVerMasSiNoExiste();
+  inicializarCartelera();
+  configurarEventListeners();
+}
+
+function crearBotonVerMasSiNoExiste() {
+  if (!estado.verMasBtn) {
+    const btnContainer = document.createElement("div");
+    btnContainer.id = "btn-container";
+    btnContainer.className = "btn-container";
+    btnContainer.innerHTML = `
     <h4 class="linea"></h4>
     <button id="ver-mas-btn" class="ver-mas-btn" type="button">
         <div class="ver-mas">
@@ -23,8 +43,21 @@ if (!verMasBtn) {
         </div>
     </button>
     `;
-  verMasBtn.style.display = "none";
-  peliculasContainer.insertAdjacentElement("afterend", verMasBtn);
+    btnContainer.style.display = "none";
+
+    elementosDOM.peliculasContainer.insertAdjacentElement(
+      "afterend",
+      btnContainer
+    );
+    estado.verMasBtn = btnContainer;
+  }
+}
+
+function configurarEventListeners() {
+  if (estado.verMasBtn) {
+    const botonVerMas = estado.verMasBtn.querySelector("#ver-mas-btn");
+    botonVerMas?.addEventListener("click", mostrarMasPeliculas);
+  }
 }
 
 function crearPeliculaCard(pelicula) {
@@ -34,121 +67,126 @@ function crearPeliculaCard(pelicula) {
   const card = document.createElement("div");
   card.className = "pelicula-card";
 
-  const clasesClasificacion = {
-    ATP: "clasificacion-atp",
-    "+13": "clasificacion-13",
-    "+16": "clasificacion-16",
-    R: "clasificacion-r",
-  };
-  const claseClasificacion = clasesClasificacion[pelicula.clasificacion] || "";
+  const claseClasificacion =
+    CONFIG.CLASIFICACIONES[pelicula.clasificacion] || "";
 
-  card.innerHTML = `
-        <div class="pelicula-imagen">
-            <img src="${pelicula.imagen}" alt="${pelicula.titulo}">
-            ${
-              pelicula.destacado
-                ? '<div class="destacado-icon"><i class="fa-regular fa-face-smile fa-lg"></i></div> '
-                : ""
-            }
-            <div class="pelicula-duracion">
-                <span>${pelicula.duracion}</span>
-            </div>
-        </div>
-        <div class="pelicula-info">
-            <div class="pelicula-titulo">
-                <h3>${pelicula.titulo}</h3>
-                <div class="clasificacion pelicula-${claseClasificacion}">
-                    <span>${pelicula.clasificacion}</span>
-                </div>
-            </div>
-            <div class="pelicula-detalles">
-                <p>${pelicula.formato}</p>
-            </div>
-        </div>
-    `;
-
+  card.innerHTML = generarHTMLPeliculaCard(pelicula, claseClasificacion);
   wrapper.appendChild(card);
 
   if (pelicula.estreno || pelicula.reestreno) {
-    const solapa = document.createElement("div");
-    solapa.className = "pelicula-solapa";
-
-    let contenidoSolapa = "";
-    if (pelicula.estreno && pelicula.reestreno) {
-      contenidoSolapa =
-        '<span class="estreno">Estreno</span><span class="reestreno">Re-Estreno</span>';
-    } else if (pelicula.estreno) {
-      contenidoSolapa = '<span class="estreno">Estreno</span>';
-    } else if (pelicula.reestreno) {
-      contenidoSolapa = '<span class="reestreno">Re-Estreno</span>';
-    }
-
-    solapa.innerHTML = contenidoSolapa;
-    wrapper.appendChild(solapa);
-    wrapper.classList.add("tiene-solapa");
+    agregarSolapaEstreno(wrapper, pelicula);
   }
 
   return wrapper;
 }
 
+function generarHTMLPeliculaCard(pelicula, claseClasificacion) {
+  return `
+    <div class="pelicula-imagen">
+      <img src="${pelicula.imagen}" alt="${pelicula.titulo}">
+      ${
+        pelicula.destacado
+          ? '<div class="destacado-icon"><i class="fa-regular fa-face-smile fa-lg"></i></div>'
+          : ""
+      }
+      <div class="pelicula-duracion">
+        <span>${pelicula.duracion}</span>
+      </div>
+    </div>
+    <div class="pelicula-info">
+      <div class="pelicula-titulo">
+        <h3>${pelicula.titulo}</h3>
+        <div class="clasificacion pelicula-${claseClasificacion}">
+          <span>${pelicula.clasificacion}</span>
+        </div>
+      </div>
+      <div class="pelicula-detalles">
+        <p>${pelicula.formato}</p>
+      </div>
+    </div>
+  `;
+}
+
+function agregarSolapaEstreno(wrapper, pelicula) {
+  const solapa = document.createElement("div");
+  solapa.className = "pelicula-solapa";
+
+  let contenidoSolapa = "";
+  if (pelicula.estreno && pelicula.reestreno) {
+    contenidoSolapa = '<span class="estreno">Estreno</span><span class="reestreno">Re-Estreno</span>';
+  } else if (pelicula.estreno) {
+    contenidoSolapa = '<span class="estreno">Estreno</span>';
+  } else if (pelicula.reestreno) {
+    contenidoSolapa = '<span class="reestreno">Re-Estreno</span>';
+  }
+
+  solapa.innerHTML = contenidoSolapa;
+  wrapper.appendChild(solapa);
+  wrapper.classList.add("tiene-solapa");
+}
 function mostrarMasPeliculas() {
-  const peliculasRestantes = peliculasCartelera.length - peliculasMostradas;
-  const cantidadAMostrar = Math.min(PELICULAS_POR_CARGA, peliculasRestantes);
+  const peliculasRestantes = estado.peliculasCartelera.length - estado.peliculasMostradas;
+  const cantidadAMostrar = Math.min(CONFIG.PELICULAS_POR_CARGA, peliculasRestantes);
 
   for (let i = 0; i < cantidadAMostrar; i++) {
-    if (peliculasMostradas < peliculasCartelera.length) {
-      const pelicula = peliculasCartelera[peliculasMostradas];
+    if (estado.peliculasMostradas < estado.peliculasCartelera.length) {
+      const pelicula = estado.peliculasCartelera[estado.peliculasMostradas];
       const card = crearPeliculaCard(pelicula);
-      peliculasContainer.appendChild(card);
-      peliculasMostradas++;
+      elementosDOM.peliculasContainer.appendChild(card);
+      estado.peliculasMostradas++;
     }
   }
 
   actualizarEstadoBoton();
-
-  if (sectionPreventa) {
-    sectionPreventa.classList.add("con-boton");
-  }
-}
-
-function actualizarEstadoBoton() {
-  if (peliculasMostradas >= peliculasCartelera.length) {
-    verMasBtn.style.display = "none";
-    if (sectionPreventa) {
-      sectionPreventa.classList.remove("con-boton");
-      sectionPreventa.classList.add("sin-boton");
-    }
-  }
+  actualizarClasesPreventa();
 }
 
 function inicializarCartelera() {
-  peliculasContainer.innerHTML = "";
-  peliculasMostradas = 0;
+  elementosDOM.peliculasContainer.innerHTML = "";
+  estado.peliculasMostradas = 0;
 
   const cantidadInicial = Math.min(
-    PELICULAS_INICIALES,
-    peliculasCartelera.length
+    CONFIG.PELICULAS_INICIALES,
+    estado.peliculasCartelera.length
   );
+  
   for (let i = 0; i < cantidadInicial; i++) {
-    const pelicula = peliculasCartelera[i];
+    const pelicula = estado.peliculasCartelera[i];
     const card = crearPeliculaCard(pelicula);
-    peliculasContainer.appendChild(card);
-    peliculasMostradas++;
+    elementosDOM.peliculasContainer.appendChild(card);
+    estado.peliculasMostradas++;
   }
 
-  if (peliculasCartelera.length > PELICULAS_INICIALES) {
-    verMasBtn.style.display = "flex";
-    const botonVerMas = verMasBtn.querySelector("#ver-mas-btn");
-    botonVerMas.addEventListener("click", mostrarMasPeliculas);
+  actualizarVisibilidadBoton();
+  actualizarClasesPreventa();
+}
 
-    if (sectionPreventa) {
-      sectionPreventa.classList.remove("con-boton");
-    }
-  } else {
-    sectionPreventa.classList.add("sin-boton");
-
-    verMasBtn.style.display = "none";
+function actualizarEstadoBoton() {
+  if (estado.peliculasMostradas >= estado.peliculasCartelera.length) {
+    estado.verMasBtn.style.display = "none";
+    actualizarClasesPreventa();
   }
 }
 
-document.addEventListener("DOMContentLoaded", inicializarCartelera);
+function actualizarVisibilidadBoton() {
+  if (estado.peliculasCartelera.length > CONFIG.PELICULAS_INICIALES) {
+    estado.verMasBtn.style.display = "flex";
+  } else {
+    estado.verMasBtn.style.display = "none";
+  }
+}
+
+function actualizarClasesPreventa() {
+  if (!elementosDOM.sectionPreventa) return;
+
+  if (estado.peliculasMostradas >= estado.peliculasCartelera.length) {
+    elementosDOM.sectionPreventa.classList.remove("con-boton");
+    elementosDOM.sectionPreventa.classList.add("sin-boton");
+  } else if (estado.peliculasCartelera.length > CONFIG.PELICULAS_INICIALES) {
+    elementosDOM.sectionPreventa.classList.remove("con-boton");
+  } else {
+    elementosDOM.sectionPreventa.classList.add("sin-boton");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", inicializarAplicacion);
